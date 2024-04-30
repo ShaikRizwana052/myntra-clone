@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"
+        style="position: fixed; z-index: 1; width: 100%; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+        <a href="http://127.0.0.1:5500/index.html"><img class="navbar-brand" src="/images/logo4.png" alt="logo"></a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:5500/product.html">MEN<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:5500/product.html">WOMEN</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:5500/product.html">KID</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:5500/product.html">BEAUTY</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        TREND
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Shirts</a>
+                        <a class="dropdown-item" href="#">Jeans</a>
+                        <a class="dropdown-item" href="#">Saree</a>
+                        <a class="dropdown-item" href="#">Kurtha</a>
+                </li>
+
+            </ul>
+            <marquee style="width: 40%; padding: 10px 20px; margin: auto; border: 1px solid grey; border-radius: 5px;"
+                behavior="scroll" direction="">Today latest brand article available in 50% off... Hurry!!!</marquee>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <br> <br><br><br><br>
+
+
+    <h6>FILTERS</h6>
+    <div class="allproducts">
+        <div class="filters">
+            <div class="limit-border">
+                <!-- <div class="dropdown">
+                <button class="dropbtn"><h5>Limits</h5></button>
+                <div class="dropdown-content">
+                    <ul>
+                 <li> <a href="#">18</a></li>
+                 <li><a href="#">25</a></li>
+                 <li><a href="#">38</a></li>
+                 <li><a href="#">42</a></li>
+                 <li><a href="#">50</a></li>
+                </ul>
+                </div>
+              </div> -->
+                <h5>Limit</h5>
+                <select name="Limit" id="">
+                    <option value="1">10</option>
+                    <option value="2">20</option>
+                    <option value="3">30</option>
+                    <option value="4">50</option>
+                    <option value="5">100</option>
+                </select>
+            </div>
+            <div class="radio">
+                <form>
+                    <input type="radio" id="men" name="fav_language" value="Men">
+                    <label for="html">Men</label><br>
+                    <input type="radio" id="women" name="fav_language" value="Women">
+                    <label for="css">Women</label><br>
+                    <input type="radio" id="boys" name="fav_language" value="Boys">
+                    <label for="javascript">Boys</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">Girls</label><br>
+                </form>
+            </div>
+
+            <div class="checkboxs">
+                <h5 class="title">Categories</h5>
+                <form>
+                    <input type="checkbox" id="Tshirts" name="Tshirts" value="Tshirts">
+                    <label for="Tshirts"> Tshirts</label><br>
+                    <input type="checkbox" id="Sarees" name="Sarees" value="Sarees">
+                    <label for="Sarees">Sarees</label><br>
+                    <input type="checkbox" id="Kurtha" name="Kurtha" value="kurtha">
+                    <label for="Kurtha">Kurtha</label><br>
+                    <input type="checkbox" id="Kurthi" name="Kurthi" value="Kurthi">
+                    <label for="Kurthi">Kurthi</label><br>
+                    <input type="checkbox" id="Shorts" name="Shorts" value="Shorts">
+                    <label for="Shorts">Shorts</label><br>
+                    <input type="checkbox" id="Trank Pants" name="Trank Pants" value="Trank Pants">
+                    <label for="Trank Pants">Track Pants</label><br>
+                    <input type="checkbox" id="Tops" name="Tops" value="Tops">
+                    <label for="Tops">Tops</label><br>
+                </form>
+            </div>
+            <div class="checkboxes">
+                <h5 class="title">BRANDS</h5>
+                <form>
+                    <input type="checkbox" id="rare rabbit" name="rare rabbit" value="Rare Rabbit">
+                    <label for="rare rabbit">Rare Rabbit </label><br>
+                    <input type="checkbox" id="wrogn" name="wrogn" value="WROGN">
+                    <label for="wrogn">WROGN</label><br>
+                    <input type="checkbox" id="florence" name="florence" value="Florence">
+                    <label for="florence">Florence</label><br>
+                    <input type="checkbox" id="charukriti" name="charukriti" value="charukriti">
+                    <label for="charukriti">Charukriti</label><br>
+                    <input type="checkbox" id="snitch" name="snitch" value="Snitch">
+                    <label for="snitch">Snitch</label><br>
+                    <input type="checkbox" id="roadster" name="roadster" value="Roadster">
+                    <label for="roadster">Roadster</label><br>
+                    <input type="checkbox" id="indian terrain" name="indian terrain" value="Indian Terrain">
+                    <label for="indian terrain">Indian Terrain</label><br>
+                    <input type="checkbox" id="indian terrain" name="indian terrain" value="Indian Terrain">
+                    <label for="indian terrain">Kanchari Pattu</label><br>
+                    <input type="checkbox" id="indian terrain" name="indian terrain" value="Indian Terrain">
+                    <label for="indian terrain">Trends</label><br>
+                    <input type="checkbox" id="indian terrain" name="indian terrain" value="Indian Terrain">
+                    <label for="indian terrain">Polo</label><br>
+                    <p class="choose-color">+ 38 more</p>
+                </form>
+            </div>
+            <div class="checkboxes">
+                <h5 class="title">PRICE</h5>
+                <form>
+                    <input type="checkbox" id="rare rabbit" name="rare rabbit" value="Rare Rabbit">
+                    <label for="rare rabbit">Rs. 199 to Rs. 499</label><br>
+                    <input type="checkbox" id="wrogn" name="wrogn" value="WROGN">
+                    <label for="wrogn">Rs. 499 to Rs. 2452</label><br>
+                    <input type="checkbox" id="florence" name="florence" value="Florence">
+                    <label for="florence">Rs. 2452 to Rs. 4635</label><br>
+                    <input type="checkbox" id="charukriti" name="charukriti" value="charukriti">
+                    <label for="charukriti">Rs. 4635 to Rs. 6818</label><br>
+                    <input type="checkbox" id="snitch" name="snitch" value="Snitch">
+                    <label for="snitch">Rs. 6818 to Rs. 9001</label><br>
+
+                </form>
+            </div>
+
+            <div class="checkboxes">
+                <h5 class="title">COLOR</h5>
+                <form>
+                    <input type="checkbox" id="rare rabbit" name="rare rabbit" value="Rare Rabbit">
+                    <label for="rare rabbit">Blue</label><br>
+                    <span data-colohex="blue" class="colour-label colour-colourDisplay"
+                        style="background-color: rgb(0,116,217);"></span>
+                    <input type="checkbox" id="wrogn" name="wrogn" value="WROGN">
+                    <label for="wrogn">White</label><br>
+                    <input type="checkbox" id="florence" name="florence" value="Florence">
+                    <label for="florence">Navy Blue</label><br>
+                    <input type="checkbox" id="charukriti" name="charukriti" value="charukriti">
+                    <label for="charukriti">Black</label><br>
+                    <input type="checkbox" id="snitch" name="snitch" value="Snitch">
+                    <label for="snitch">Pink</label><br>
+                    <input type="checkbox" id="snitch" name="snitch" value="Snitch">
+                    <label for="snitch">Green</label><br>
+                    <input type="checkbox" id="snitch" name="snitch" value="Snitch">
+                    <label for="snitch">Orange</label><br>
+                    <p class="choose-color">+ 38 more</p>
+
+                </form>
+            </div>
+            <div class="radio">
+                <h5 class="title">Discount Range</h5>
+                <form>
+                    <input type="radio" id="men" name="fav_language" value="Men">
+                    <label for="html">10% and above</label><br>
+                    <input type="radio" id="women" name="fav_language" value="Women">
+                    <label for="css">20% and above</label><br>
+                    <input type="radio" id="boys" name="fav_language" value="Boys">
+                    <label for="javascript">30% and above</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">40% and above</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">50% and above</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">60% and above</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">70% and above</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">80% and above</label><br>
+                    <input type="radio" id="girls" name="fav_language" value="Girls">
+                    <label for="javascript">90% and above</label><br>
+
+                </form>
+            </div>
+
+
+        </div>
+        <div id="productContainer"></div>
+    </div>
+    <br><br><br><br>
+
+    <!-- ------------footer---------- -->
+
+    <footer class="text-white text-center text-lg-start bg-dark">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row mt-4">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">About company</h5>
+
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti.
+                    </p>
+
+                    <p>
+                        Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+                        molestias.
+                    </p>
+
+                    <div class="mt-4">
+                        <!-- Facebook -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
+                        <!-- Dribbble -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-dribbble"></i></a>
+                        <!-- Twitter -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
+                        <!-- Google + -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i
+                                class="fab fa-google-plus-g"></i></a>
+                        <!-- Linkedin -->
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                        <label class="form-label" for="formControlLg">Search</label>
+                    </div>
+
+                    <ul class="fa-ul" style="margin-left: 1.65em;">
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Warsaw, 00-967,
+                                Poland</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                                class="ms-2">contact@example.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 48 234 567
+                                88</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+                    <table class="table text-center text-white">
+                        <tbody class="fw-normal">
+                            <tr>
+                                <td>Mon - Thu:</td>
+                                <td>8am - 9pm</td>
+                            </tr>
+                            <tr>
+                                <td>Fri - Sat:</td>
+                                <td>8am - 1am</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday:</td>
+                                <td>9am - 10pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script src="/javascript/product.js"></script>
