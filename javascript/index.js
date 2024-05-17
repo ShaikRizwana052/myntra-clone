@@ -67,3 +67,9 @@ let counter = 0;
 // setInterval(moveCarousel, 1000); // Change slide every 3 seconds
 
 // ----------------------------dynamic data feed-------------------------------------
+
+// Initialize carousel
+var myCarousel = document.getElementById("carouselExampleControls");
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000, // Set the interval to 2000 milliseconds (2 seconds)
+});

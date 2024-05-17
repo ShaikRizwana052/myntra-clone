@@ -4,16 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My One FAUGET</title>
+    <title>Payment Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .checked {
-            color: orange;
-        }
-    </style>
 </head>
 
 <body>
@@ -68,82 +62,126 @@
             <!-- </form> -->
 
             <a href="/cart.html"><img src="/images/cart.png" alt="cart" style="width: 15%;"></a>
-            <a href="login.html"><button class="btn btn-outline-success my-2 my-sm-0"
-                    style="color: black; border: 1px solid black; margin: 12px;" type="submit">Login</button></a>
-            <a href="signupLogin.html"><button class="btn btn-outline-success my-2 my-sm-0"
-                    style="color: black; border: 1px solid black; margin: 12px;">Sign up</button></a>
+
 
         </div>
     </nav>
     <br> <br><br><br><br>
 
-    <div class="single">
-        <!-- <div class="desc">
-            <a href="#">Home /</a>
-            <a href="#">clothing /</a>
-            <a href="#">Women Clothing /</a>
-            <a href="#">Sarees /</a>
-            <a href="#">Anouk Sarees /</a>
-        </div> -->
-        <div class="saree">
-            <!-- <img src="/images//pic13.png" alt="pic">
-            <img src="/images/pic14.png" alt="pic"><br>
-            <img src="/images/pic15.png" alt="pic">
-            <img src="/images/pic16.png" alt="pic"> -->
-        </div>
-        <div class="shopnow">
-            <div class="anouk">
-                <h4></h4>
-                <p class="purple">Purple & Gold-Toned Floral Design Zari <br> Banarasi Saree</p>
-                <div id="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span> | 2.1K rating
+
+    <div class="paymentContainer">
+        <article class="card">
+            <div class="container">
+                <div class="card-title">
+                    <br>
+                    <h2>Payment</h2>
                 </div>
-                <p id="pricing"><span style="color: orange;">(53% OFF)</span></p>
-                <p><span style="color: green;">inclusive of all taxes</span></p>
+                <div class="card-body">
+                    <div class="payment-type">
+                        <h4>Choose payment method below</h4>
+                        <div class="types-between" style="display: flex; margin:auto">
+                            <div class="text">
+                                <p>Pay with Credit Card</p>
+                            </div>
+                            <div class="text">
+                                <p>Pay with PayPal</p>
+                            </div>
+                            <div class="text">
+                                <p>Pay with Amazon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-info flex justify-space-between">
+                    <div class="column billing" style="width: 56%; margin: auto;">
+                        <div class="title">
+                            <div class="num">1</div>
+                            <h4>Billing Info</h4>
+                        </div>
+                        <div class="fieldfull">
+                            <label for="name" class="name">Full Name</label>
+                            <input id="name" type="text" placeholder="Enter your full name">
+                        </div>
+                        <div class="fieldfull">
+                            <label for="address" class="address">Billing Address</label>
+                            <input id="address" type="text" placeholder="Enter your billing address">
+                        </div>
+                        <div class="flex justify-space-between">
+                            <div class="fieldhalf">
+                                <label for="city" class="city">City</label>
+                                <input id="city" type="text" placeholder="Enter your city">
+                            </div>
+                            <div class="fieldhalf">
+                                <label for="state" class="state">State</label>
+                                <input id="state" type="text" placeholder="Enter your state">
+                            </div>
+                        </div>
+                        <div class="fieldfull">
+                            <label for="zip" class="zip">Zip</label>
+                            <input id="zip" type="text" placeholder="Enter your zip code">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="column shipping" style="width: 56%; margin: auto;">
+                        <div class="title">
+                            <div class="num">2</div>
+                            <h4>Credit Card Info</h4>
+                        </div>
+                        <div class="fieldfull"><br>
+                            <label class="name">Cardholder Name</label>
+                            <input id="name" type="text" placeholder="Full Name">
+                        </div>
+                        <div class="fieldfull">
+                            <label class="address">Card Number</label>
+                            <input id="address" type="text" placeholder="1234-5678-9012-3456">
+                        </div>
+                        <div class="flex justify-space-between" style="display: flex; padding: auto;">
+                            <div class="fieldfull">
+                                <label class="city">Exp.</label>
+                                <input id="city" style="width: 50%;" type="text" placeholder="12/25">
+                            </div>
+                            <div id="otpBox">
+                                <label>Enter OTP Here</label>
+                                <input id="otp" type="text" placeholder="Enter OTP Here">
+                                <div style="display: flex; justify-content: space-around;">
+                                    <button onclick="generateOTP()" id="regenerate">OTP Re-Generate</button>
+                                    <button id="submitOtp">OK</button>
+                                </div>
+                            </div>
+                            <div class="fieldfull">
+                                <label class="zip">CVC Number</label>
+                                <input id="zip" style="width: 50%;" type="text" placeholder="468">
+                            </div>
+
+                            <!-- <div class="fieldfull" style="text-align: center;"> -->
+
+                            <!-- <label class="otp">Enter OTP</label>
+                                <input id="otp" type="text" placeholder="Enter OTP"> -->
+                            <!-- <div id="otpDisplay"></div> -->
+                            <!-- </div> -->
+                            <!-- </div> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions" style="display: flex; justify-content: space-around;">
+                    <div class="flex-start">
+                        <a href="/index.html"><button class="button button-secondary">Return to Store</button></a>
+                    </div>
+                    <div class="flex-end">
+                        <a href="/cart.html"><button class="button button-link">Back to Shipping</button></a>
+                    </div>
+                    <!-- <button id="paymentButton" class="button button-primary" onclick="proceedPayment()">Proceed</button> -->
+                    <button id="paymentButton" class="button button-primary" onclick="generateOTP()">Generate
+                        OTP</button>
+                </div>
+
             </div>
-            <div class="desc1">
-                <a href="#"><button onclick="addToCart()"
-                        style="padding: 10px 20px; background-color: gray;border-radius: 5px; border:none;color: white;">SHOP
-                        NOW</button></a>
-                <h6>Quantity</h6>
 
 
-                <p>seller:<span style="color: red;"> LIFESTYLE PVT LTD-SJIT</span></p>
-                <p><span id="desc3" style="color: green;">ProductDescribtion</span></p>
-
-            </div>
-            <div class="delivery">
-                <h5>DELIVERY OPTIONS</h5>
-                <input type="text" placeholder="Enter Pincode" required>
-                <p>Please enter PIN code to check delevry time & pay on Delivery Avaliablity</p>
-
-            </div>
-            <div class="original">
-                <p>100% Original Products</p>
-                <p>Pay onn delivery might be avaliable</p>
-                <p>Easy 14 days returns and exchanges</p>
-            </div>
-            <div id="para">
-                <h6>BEST OFFERS</h6>
-                <h6>Best Price:<span style="color: orange;"></span></h6>
-                <ul>
-                    <li><b>TYPES:</b><span id="types"></span></li>
-                    <li>Coupon code:<b>TOPBANDOFFER</b></li>
-                    <li>coupon Discount:Rs.250 off (check cart for final savings)</li>
-                    <p>7.5% Discount on FAUGET Kotak credit card</p>
-                    <li>Max DIscount up to Rs750 on every spends</li>
-                    <p>EMI option available</p>
-                    <li>EMI srarting from Rs.499/month</li>
-                    <p><span style="color: red;">view plan</span></p>
-                </ul>
-            </div>
-        </div>
     </div>
-    <!-- ---------footer-------- -->
+
 
     <footer class="text-white text-center text-lg-start bg-dark">
         <!-- Grid container -->
@@ -250,7 +288,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
-<script src="/javascript/singleProduct.js"></script>
+<script src="/javascript/payment.js"></script>
