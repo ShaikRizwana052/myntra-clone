@@ -874,3 +874,22 @@ h2 {
   display: flex;
   margin: auto;
 }
+
+.women{
+  margin: auto;
+  width: 100%;
+  display: flex;
+}
+.explore img{
+ width: 23%;
+ padding: 2%;
+ /* display: flex; */
+}
+.explore h1{
+  color: #182c52;
+  padding-top: 20px;
+  font-size: 45px;
+  text-align: center;
+  font-family: sans-serif bold;
+  justify-content: space-between;
+}
