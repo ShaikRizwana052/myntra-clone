@@ -94,7 +94,7 @@ button {
 }
 
 /* -------------new arrival---- */
-.heading1 {
+/* .heading1 {
   margin-top: 8%;
   font-size: 45px;
   line-height: 42px;
@@ -154,7 +154,114 @@ button {
   padding: 10px;
   font-size: 13px;
   color: #182c52;
+} */
+
+.heading1 {
+  margin-top: 8%;
+  font-size: 45px;
+  line-height: 42px;
+  text-align: center;
+  font-family: sans-serif bold;
+  color: #182c52;
 }
+
+.small2 {
+  text-align: center;
+  padding-top: 2%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.small2 a:hover {
+  text-decoration: underline;
+}
+
+.small2 a {
+  font-family: sans-serif bold;
+  color: #182c52;
+}
+
+.small2 a > h4 {
+  font-size: 16px;
+  padding: 9px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.easy {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.easy .size {
+  padding: 12px;
+  margin: 12px;
+  transition: 0.4s;
+  min-width: 200px; /* Adjust based on your card width */
+  flex-shrink: 0;
+}
+
+.size {
+  position: relative;
+}
+
+.size:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(1.1);
+}
+
+.label {
+  position: absolute;
+  background-color: wheat;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 26px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.text {
+  margin-left: 12px;
+  padding: 10px;
+  font-size: 13px;
+  color: #182c52;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 
 footer {
   display: flex;

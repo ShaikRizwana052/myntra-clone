@@ -73,3 +73,34 @@ var myCarousel = document.getElementById("carouselExampleControls");
 var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 2000, // Set the interval to 2000 milliseconds (2 seconds)
 });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.easy');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    
+    let currentIndex = 0;
+    const cardWidth = document.querySelector('.size').offsetWidth;
+    const totalCards = document.querySelectorAll('.size').length;
+    const visibleCards = Math.floor(document.querySelector('.resize').offsetWidth / cardWidth);
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < totalCards - visibleCards) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    function updateSlider() {
+      const offset = -(currentIndex * cardWidth);
+      slider.style.transform = `translateX(${offset}px)`;
+    }
+  });
