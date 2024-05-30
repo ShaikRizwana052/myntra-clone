@@ -75,6 +75,8 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 });
 
 
+
+
   document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.easy');
     const prevBtn = document.querySelector('.prev');
@@ -104,3 +106,34 @@ var carousel = new bootstrap.Carousel(myCarousel, {
       slider.style.transform = `translateX(${offset}px)`;
     }
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.slider');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let currentIndex = 0;
+    const cardWidth = document.querySelector('.photos').offsetWidth;
+    const totalCards = document.querySelectorAll('.photos').length;
+    const visibleCards = Math.floor(document.querySelector('.slider-container').offsetWidth / cardWidth);
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < totalCards - visibleCards) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    function updateSlider() {
+      const offset = -(currentIndex * cardWidth);
+      slider.style.transform = `translateX(${offset}px)`;
+    }
+  });
+
