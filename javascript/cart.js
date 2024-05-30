@@ -1,7 +1,7 @@
 let token = JSON.parse(sessionStorage.getItem("authToken"));
 async function fetchCartData() {
   try {
-    const response = await fetch("http://localhost:9091/cart/getall-cart", {
+    const response = await fetch("https://myntra-clone-backend-ursu.onrender.com/cart/getall-cart", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ display();
 async function removeItem(id) {
   try {
     const response = await fetch(
-      `http://localhost:9091/cart/delete-cart/${id}`,
+      `https://myntra-clone-backend-ursu.onrender.com/cart/delete-cart/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -163,7 +163,7 @@ async function removeCartItem(elem) {
 async function variateItemQty(id, qty) {
   try {
     const response = await fetch(
-      `http://localhost:9091/cart/update-cart/${id}`,
+      `https://myntra-clone-backend-ursu.onrender.com/cart/update-cart/${id}`,
       {
         method: "PATCH",
         headers: {
@@ -205,7 +205,7 @@ async function decrement(elem) {
 
 async function emptyCart() {
   try {
-    const response = await fetch("http://localhost:9091/cart/deleteAll-cart", {
+    const response = await fetch("https://myntra-clone-backend-ursu.onrender.com/cart/deleteAll-cart", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

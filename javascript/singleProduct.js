@@ -27,7 +27,7 @@ async function addProduct(productId, token) {
   try {
     const payload = { productId, quantity: 1 };
 
-    const response = await fetch("http://localhost:9091/cart/create-cart", {
+    const response = await fetch("https://myntra-clone-backend-ursu.onrender.com/cart/create-cart", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {

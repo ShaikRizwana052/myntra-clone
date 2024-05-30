@@ -16,7 +16,7 @@ function getFormData() {
 
 async function signup(userData) {
   try {
-    const response = await fetch("http://localhost:9091/user/signup", {
+    const response = await fetch("https://myntra-clone-backend-ursu.onrender.com/user/signup", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {

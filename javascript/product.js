@@ -1,6 +1,6 @@
 async function fetchData() {
   try {
-    const response = await fetch("http://localhost:9091/product/all-product");
+    const response = await fetch("https://myntra-clone-backend-ursu.onrender.com/product/all-product");
     if (!response.ok) {
       throw new Error("Failed to fetch products");
     }
