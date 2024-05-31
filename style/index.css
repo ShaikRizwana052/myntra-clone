@@ -73,23 +73,29 @@ button {
 }
 
 .slider {
+  margin-left: 22%;
   display: flex;
   transition: transform 0.5s ease;
+  
 }
 
 .image .photos {
   margin: 10px;
   min-width: 200px; /* Adjust this value based on your card width */
+  
 }
 
 .photos > a > img {
   border-radius: 50%;
   transition: 0.3s;
+
+  
 }
 
 .photos {
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+
 }
 
 .photos h4 {
